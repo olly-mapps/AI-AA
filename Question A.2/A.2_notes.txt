@@ -1,1 +1,2 @@
 Total Return (R_t) = (H_t - V_t) / V_t
+

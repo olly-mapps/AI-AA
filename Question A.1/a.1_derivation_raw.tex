@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\section*{Question A.1}
+
+Here we document the construction of Price-to-Dividend ratio $PD_t$ and the log dividend growth over the past year $\Delta d_t$.
+
+\subsection*{Price-to-Dividend Ration $PD_t$}
+
+We first wish to construct the Price-to-Dividend ratio $PD_t$. Using $H_t$ and $V_t$, we find:
+
+\[H_t + 1 \equiv \frac{P_t + D_{t-1 Y_{r,t}}}{P_{t-1Y_r}} \ \ \ \text{and} \ \ \ V_t + 1 \equiv \frac{P_t}{P_{t-1 Y_r}} \]
+
+\noindent Then, by taking the fraction between these two values:
+
+\[\frac{H_t+1}{V_t+1} = \frac{\frac{P_t + D_{t-1 Y_{r,t}}}{P_{t-1Y_r}}}{\frac{P_t}{P_{t-1 Y_r}}} = \frac{P_t + D_{t-1 Y_{r,t}}}{P_t} = 1 + \frac{D_{t-1 Y_{r,t}}}{P_t}\]
+
+\noindent If we now rearrange, we find:
+
+\[\frac{H_t+1}{V_t+1} - 1 = \frac{D_{t-1 Y_{r,t}}}{P_t}\] 
+
+\noindent and simplifying the expression on the left:
+
+\[\frac{H_t+1}{V_t+1} - 1 = \frac{H_t+1}{V_t+1} - \frac{V_t+1}{V_t+1} = \frac{H_t - V_t}{V_t + 1} = \frac{D_{t-1 Y_{r,t}}}{P_t}\]
+
+\noindent and then taking the inverse, we find:
+
+\[\frac{V_t + 1}{H_t - V_t} = \frac{P_t}{D_{t-1 Y_{r,t}}} = PD_t \]
+
+\noindent as required.
+
+\subsection*{Log dividend growth over the past year $\Delta d_t$.}
+
+\noindent We now wish to construct  the log dividend growth over the past year $\Delta d_t$ using $H_t$ and $V_t$. As before, we have:
+
+\[H_t + 1 \equiv \frac{P_t + D_{t-1 Y_{r,t}}}{P_{t-1Y_r}} \ \ \ \text{and} \ \ \ V_t + 1 \equiv \frac{P_t}{P_{t-1 Y_r}} \]
+
+\noindent Which implies:
+
+\[H_t + 1 - V_t + 1 = H_t - V_t = \frac{P_t + D_{t-1 Y_{r,t}}}{P_{t-1Y_r}} - \frac{P_t}{P_{t-1 Y_r}} = \frac{D_{t-1 Y_{r,t}}}{P_{t-1Y_r}}\]
+
+\noindent Similarly, we have:
+
+\[H_{t-1} - V_{t-1} = \frac{D_{t-2 Y_{r,t-1 Y_r}}}{P_{t-2 Y_{r,t-1 Y_r}}}\]
+
+\noindent Now if we divide these two equations:
+
+\[\frac{H_t - V_t}{H_{t-1} - V_{t-1}} = \frac{\frac{D_{t-1 Y_{r,t}}}{P_{t-1Y_r}}}{\frac{D_{t-2 Y_{r,t-1 Y_r}}}{P_{t-2 Y_{r,t-1 Y_r}}}} = \frac{D_{t-1 Y_{r,t}}}{D_{t-2 Y_{r,t-1 Y_r}}} \cdot \frac{P_{t-2 Y_{r,t-1 Y_r}}}{P_{t-1Y_r}}\]
+
+\noindent Now from the definition of $V_t$, we have:
+
+\[\frac{H_t - V_t}{H_{t-1} - V_{t-1}} = \frac{D_{t-1 Y_{r,t}}}{D_{t-2 Y_{r,t-1 Y_r}}} \cdot \frac{1}{1+V_{t-1}}  \]
+
+\noindent Which implies: 
+
+\[ \frac{(H_t - V_t)(V_{t - 1} + 1)}{H_{t-1} - V_{t-1}} = \frac{D_{t-1 Y_{r,t}}}{D_{t-2 Y_{r,t-1 Y_r}}}\]
+
+\noindent Now we can take the log of both sides:
+
+\[ \log \left(\frac{(H_t - V_t)(V_{t-1} + 1)}{H_{t-1} - V_{t-1}}\right) = \log \left( \frac{D_{t-1 Y_{r,t}}}{D_{t-2 Y_{r,t-1 Y_r}}}\right)\]
+
+\noindent Which by the law of logarithms, is then:
+
+\[ \log \left ( (H_t - V_t)(V_{t-1} + 1 ) \right) - \log \left ( H_{t-1} - V_{t-1} \right) = \Delta d_t\]
+
+\noindent As required
+
+\end{document}
