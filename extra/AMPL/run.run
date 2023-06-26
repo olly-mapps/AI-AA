@@ -1,0 +1,11 @@
+reset;
+
+model model.mod;
+
+data data.dat;
+
+option cplex_options 'mipdisplay 3 mipgap 0.0005';
+
+option solver cplex;
+
+solve;
